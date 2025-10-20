@@ -1,39 +1,55 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro site to AC-DB.github.io
 
 on:
-  # 每次推送到 `main` 分支时触发这个“工作流程”
-  # 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名
+  # 每次推送到 master 分支时触发部署
   push:
-    branches: [ gh-pages ]
-  # 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”
+    branches: [ master ]
+  # 允许手动触发
   workflow_dispatch:
 
-# 允许 job 克隆 repo 并创建一个 page deployment
+# 设置必要的权限
 permissions:
   contents: read
   pages: write
   id-token: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      # 1. 检出源码
+      - name: Checkout source repository
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
-        # with:
-          # path: . # 存储库中 Astro 项目的根位置。（可选）
-          # node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）
-          # package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # 2. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. 安装依赖
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. 构建 Astro 项目
+      - name: Build Astro site
+        run: npm run build
+
+      # 5. 显示构建目录文件列表（状态指示/调试用）
+      - name: Show build output
+        run: ls -l ./dist
+
+      # 6. 部署到 AC-DB.github.io 仓库的 gh-pages 分支
+      - name: Deploy to AC-DB.github.io:gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # 你的 PAT，需提前配置
+          publish_dir: ./dist
+          external_repository: AC-DB/AC-DB.github.io
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      # 7. 输出部署完成状态信息
+      - name: Deployment status
+        run: echo "🚀 Astro 站点已自动推送到 https://AC-DB.github.io"
