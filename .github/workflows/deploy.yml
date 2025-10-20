@@ -33,16 +33,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Check secrets
-      run: |
-        if [ -z "${{ secrets.PERSONAL_ACCESS_TOKEN }}" ]; then
-          echo "PERSONAL_ACCESS_TOKEN is NOT set"
-          exit 1
-        else
-          echo "PERSONAL_ACCESS_TOKEN is set"
-        fi
 
-        # 6. 部署到 AC-DB.github.io 仓库的 gh-pages 分支
+    - name: List dist directory
+      run: |
+        echo "查看 dist 目录下内容："
+        ls -al ./dist
+        echo "递归列出所有 dist 下文件："
+        find ./dist
+
+    # 6. 部署到 AC-DB.github.io 仓库的 gh-pages 分支
     - name: Deploy to AC-DB.github.io:gh-pages
       uses: peaceiris/actions-gh-pages@v4
       with:
@@ -56,30 +55,5 @@ jobs:
       # 7. 输出部署完成状态信息
     - name: Deployment status
       run: echo "🚀 Astro 站点已自动推送到 https://AC-DB.github.io"
-
-  # build-and-deploy:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # 1. 检出源码
-  #     - name: Checkout source repository
-  #       uses: actions/checkout@v4
-
-  #     # 2. 设置 Node.js 环境
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: '20'
-
-  #     # 3. 安装依赖
-  #     - name: Install dependencies
-  #       run: npm ci
-
-  #     # 4. 构建 Astro 项目
-  #     - name: Build Astro site
-  #       run: npm run build
-
-  #     # 5. 显示构建目录文件列表（状态指示/调试用）
-  #     - name: Show build output
-  #       run: ls -l ./dist
 
       
