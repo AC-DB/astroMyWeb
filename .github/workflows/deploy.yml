@@ -60,9 +60,3 @@ jobs:
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-
-        # 7. 输出部署完成状态信息
-      - name: Deployment status
-        run: echo "🚀 Astro 站点已自动推送到 https://AC-DB.github.io"
-
-      
