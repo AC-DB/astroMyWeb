@@ -33,24 +33,29 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4
+    - name: Check secrets
+      run: |
+        if [ -z "${{ secrets.PERSONAL_ACCESS_TOKEN }}" ]; then
+          echo "PERSONAL_ACCESS_TOKEN is NOT set"
+          exit 1
+        else
+          echo "PERSONAL_ACCESS_TOKEN is set"
+        fi
 
         # 6. 部署到 AC-DB.github.io 仓库的 gh-pages 分支
-      - name: Deploy to AC-DB.github.io:gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # 你的 PAT，需提前配置
-          publish_dir: ./dist
-          external_repository: AC-DB/AC-DB.github.io
-          publish_branch: gh-pages
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+    - name: Deploy to AC-DB.github.io:gh-pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # 你的 PAT，需提前配置
+        publish_dir: ./dist
+        external_repository: AC-DB/AC-DB.github.io
+        publish_branch: gh-pages
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
 
       # 7. 输出部署完成状态信息
-      - name: Deployment status
-        run: echo "🚀 Astro 站点已自动推送到 https://AC-DB.github.io"
+    - name: Deployment status
+      run: echo "🚀 Astro 站点已自动推送到 https://AC-DB.github.io"
 
   # build-and-deploy:
   #   runs-on: ubuntu-latest
