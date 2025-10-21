@@ -17,7 +17,7 @@ export const siteConfig: SiteConfig = {
 	},
 	banner: {
 		enable: true,
-		src: "assets/images/ba-banner.jpg", // 相对于 /src 目录。如果 /public 目录以 '/' 开头，则相对于 /public 目录。
+		src: "assets/images/ba-banner.png", // 相对于 /src 目录。如果 /public 目录以 '/' 开头，则相对于 /public 目录。
 		position: "center", // 等同于 object-position，仅支持 'top'、'center'、'bottom'。默认为 'center'。
 		credit: {
 			enable: false, // 显示横幅图片的版权文字。
