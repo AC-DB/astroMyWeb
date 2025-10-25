@@ -31,7 +31,7 @@ export default defineConfig({
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
-			nesting: true,
+			nesting: true, // 启用嵌套支持
 		}),
 		swup({
 			theme: false,

@@ -11,40 +11,36 @@ draft: false
 
 段落之间以空行分隔。
 
-第二段。斜体、**粗体**和等宽字体。逐项列表
-如下所示：
+第二段. _斜体_ 、 **粗体** 和 `等宽字体` 。逐项列表
+如下所示:
 
 - 这一项
 - 那一项
 - 另一项
 
-请注意，--- 不考虑星号 --- 实际文本
-内容从第 4 列开始。
+请注意，--- 不考虑星号 --- 实际文本内容从第 4 列开始。
 
 > 块引用
 > 的写法如下。
 >
 > 如果您愿意，它们可以跨越多个段落。
 
-使用 3 个破折号表示长破折号。使用 2 个破折号表示范围（例如，“全部
-在第 12-14 章”）。三个点...将转换为省略号。
-支持 Unicode。☺
+使用 3 个破折号表示长破折号。使用 2 个破折号表示范围（例如，“全部在第 12-14 章”）。三个点...将转换为省略号。支持 Unicode。☺
 
 ## 一个 h2 标题
 
-这是一个带编号的列表：
+这是一个带编号的列表:
 
 1. 第一项
 2. 第二项
 3. 第三项
 
-再次注意，实际文本从第 4 列（从左侧算起 4 个字符）开始。以下是代码示例：
+再次注意，实际文本从第 4 列（从左侧算起 4 个字符）开始。以下是代码示例:
 
-# 让我再重复一遍……
+    # 让我再重复一遍……
+    for i in 1 .. 10 { do-something(i) }
 
-for i in 1 .. 10 { do-something(i) }
-
-你可能已经猜到了，缩进 4 个空格。顺便说一句，除了缩进代码块之外，如果你愿意，也可以使用分隔块：
+你可能已经猜到了，缩进 4 个空格。顺便说一句，除了缩进代码块之外，如果你愿意，也可以使用分隔块:
 
 ```
 define foobar() {
@@ -52,111 +48,110 @@ define foobar() {
 }
 ```
 
-（这使得复制和粘贴更容易）。您可以选择标记
-分隔块，以便 Pandoc 对其进行语法高亮：
+（这使得复制和粘贴更容易）。您可以选择标记分隔块，以便 Pandoc 对其进行语法高亮:
 
 ```python
 import time
-# Quick, count to ten!
+# 快速数到 10
 for i in range(10):
-    # (but not *too* quick)
+    # 但是别太快
     time.sleep(0.5)
     print i
 ```
 
-### An h3 header
+### 一个 h3 标题
 
-Now a nested list:
+一个新的待办清单:
 
-1. First, get these ingredients:
+1. 首先，准备好以下食材:
 
-    - carrots
-    - celery
-    - lentils
+    - 胡萝卜
+    - 芹菜
+    - 扁豆
 
-2. Boil some water.
+2. 烧开水。
 
-3. Dump everything in the pot and follow
-    this algorithm:
+3. 将所有食材倒入锅中，并按照以下规则操作:
 
-        find wooden spoon
-        uncover pot
-        stir
-        cover pot
-        balance wooden spoon precariously on pot handle
-        wait 10 minutes
-        goto first step (or shut off burner when done)
+        找到木勺
+        揭开锅盖
+        搅拌
+        盖上锅盖
+        将木勺在锅柄上保持平衡
+        等待10分钟
+        转到第一步（完成后关火）
 
-    Do not bump wooden spoon or it will fall.
+    不要碰到木勺，否则它会掉下来。
 
-Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above).
+再次注意文本始终以4格缩进对齐（包括上面第3项的最后一行）。
 
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
+这是指向[一个网站](http://foo.bar)、[本地文档](local-doc.html)和[当前文档中的章节标题](#an-h2-header)的链接。这是脚注[^1]。
 
-[^1]: Footnote text goes here.
+[^1]: 此处为脚注文本。
 
-Tables can look like this:
+表格可以像这样:
 
-size material color
+| 尺寸 | 材质       | 颜色   |
+|------|------------|--------|
+| 9    | 皮革   |    棕色    |
+| 10   | 麻 帆布 |   天然     |
+| 11   | 玻璃   |   透明     |
 
----
-
-9 leather brown
-10 hemp canvas natural
-11 glass transparent
-
-Table: Shoes, their sizes, and what they're made of
-
-(The above is the caption for the table.) Pandoc also supports
-multi-line tables:
+表格: 鞋子、尺码及其材质
 
 ---
 
-keyword text
+Pandoc 还支持多行表格：
+
+| 关键字 | 文本                      |
+|--------|---------------------------|
+| 红色   | 日落、苹果和其他红色或略带红色的东西。 |
+| 绿色   | 树叶、草、青蛙以及其他不容易被感知到的事物。 |
 
 ---
 
-red Sunsets, apples, and
-other red or reddish
-things.
+（以上是表格的标题。）
 
-green Leaves, grass, frogs
-and other things it's
-not easy being.
+Pandoc 还支持多行表格:
 
----
-
-A horizontal rule follows.
+| 关键字 | 文本                      |
+|--------|---------------------------|
+| 红色   | 日落、苹果和其他红色或略带红色的东西。 |
+| 绿色   | 树叶、草、青蛙以及其他不容易被感知到的事物。 |
 
 ---
 
-Here's a definition list:
+以下是水平线。
 
-apples
-: Good for making applesauce.
-oranges
-: Citrus!
-tomatoes
-: There's no "e" in tomatoe.
+---
 
-Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)
+以下是定义列表:
 
-Here's a "line block":
+苹果  
+: 适合制作苹果酱。
 
-| Line one
-| Line too
-| Line tree
+橙子  
+: 柑橘！
 
-and images can be specified like so:
+西红柿  
+: 西红柿中没有“e”。
+
+同样，文本缩进 4 个空格。（每个术语/定义对之间空一行，以便更清晰地展开。）
+
+---
+
+这是一个“行块”:
+
+| 第一行  
+| 第二行  
+| 行三  
+
+图像可以像这样指定:
 
 [//]: # (![example image]&#40;./demo-banner.png "An exemplary image"&#41;)
 
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
+内联数学方程式如下: $\omega = d\phi / dt$。显示
+数学公式应单独一行，并以双美元符号形式输入:
 
 $$I = \int \rho R^{2} dV$$
 
@@ -169,5 +164,5 @@ $$
 \end{equation*}
 $$
 
-And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+请注意，您可以使用反斜杠转义任何标点符号
+希望按字面显示，例如: \`foo\`、\*bar\* 等。

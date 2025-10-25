@@ -2,8 +2,8 @@
 title: 富有表现力的代码示例
 published: 2024-04-10
 description: 使用 Expressive Code 时代码块在 Markdown 中的外观。
-tags: [Markdown, Blogging, Demo]
-category: Examples
+tags: [Markdown, 博客, Demo]
+category: 示例
 draft: false
 ---
 

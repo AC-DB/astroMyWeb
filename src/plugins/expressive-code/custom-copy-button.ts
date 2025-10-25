@@ -1,6 +1,7 @@
 import { definePlugin } from "@expressive-code/core";
 import type { Element } from "hast";
 
+// 为代码块添加自定义复制按钮
 export function pluginCustomCopyButton() {
 	return definePlugin({
 		name: "Custom Copy Button",

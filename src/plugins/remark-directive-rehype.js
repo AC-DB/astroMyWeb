@@ -1,6 +1,7 @@
 import { h } from "hastscript";
 import { visit } from "unist-util-visit";
 
+// 解析自定义指令节点并将其转换为 HAST 节点
 export function parseDirectiveNode() {
 	return (tree, { _data }) => {
 		visit(tree, (node) => {
@@ -17,7 +18,7 @@ export function parseDirectiveNode() {
 					node.children[0].data &&
 					node.children[0].data.directiveLabel
 				) {
-					// Add a flag to the node to indicate that it has a directive label
+					// 向节点添加一个标志，以表明它有一个指令标签
 					node.attributes["has-directive-label"] = true;
 				}
 				const hast = h(node.name, node.attributes);

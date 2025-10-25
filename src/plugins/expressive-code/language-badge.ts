@@ -3,6 +3,7 @@
  */
 import { definePlugin } from "@expressive-code/core";
 
+// 为代码块添加语言徽章
 export function pluginLanguageBadge() {
 	return definePlugin({
 		name: "Language Badge",

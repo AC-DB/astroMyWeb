@@ -77,6 +77,7 @@ export const profileConfig: ProfileConfig = {
 	],
 };
 
+// 许可证配置
 export const licenseConfig: LicenseConfig = {
 	enable: true,
 	name: "CC BY-NC-SA 4.0",

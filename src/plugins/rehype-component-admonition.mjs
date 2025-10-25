@@ -2,14 +2,14 @@
 import { h } from "hastscript";
 
 /**
- * Creates an admonition component.
- *
- * @param {Object} properties - The properties of the component.
- * @param {string} [properties.title] - An optional title.
- * @param {('tip'|'note'|'important'|'caution'|'warning')} type - The admonition type.
- * @param {import('mdast').RootContent[]} children - The children elements of the component.
- * @returns {import('mdast').Parent} The created admonition component.
- */
+* 创建一个警告组件。
+*
+* @param {Object} properties - 组件的属性。
+* @param {string} [properties.title] - 可选标题。
+* @param {('tip'|'note'|'important'|'caution'|'warning')} type - 警告类型。
+* @param {import('mdast').RootContent[]} children - 组件的子元素。
+* @returns {import('mdast').Parent} 已创建的警告组件。
+*/
 export function AdmonitionComponent(properties, children, type) {
 	if (!Array.isArray(children) || children.length === 0)
 		return h(

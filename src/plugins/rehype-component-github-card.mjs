@@ -2,12 +2,12 @@
 import { h } from "hastscript";
 
 /**
- * Creates a GitHub Card component.
+ * 创建 GitHub Card 组件。
  *
- * @param {Object} properties - The properties of the component.
- * @param {string} properties.repo - The GitHub repository in the format "owner/repo".
- * @param {import('mdast').RootContent[]} children - The children elements of the component.
- * @returns {import('mdast').Parent} The created GitHub Card component.
+ * @param {Object} properties - 组件的属性。
+ * @param {string} properties.repo - GitHub 仓库，格式为“owner/repo”。
+ * @param {import('mdast').RootContent[]} children - 组件的子元素。
+ * @returns {import('mdast').Parent} 已创建的 GitHub Card 组件。
  */
 export function GithubCardComponent(properties, children) {
 	if (Array.isArray(children) && children.length !== 0)

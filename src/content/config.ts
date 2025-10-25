@@ -1,5 +1,6 @@
 import { defineCollection, z } from "astro:content";
 
+// 定义内容集合及其模式
 const postsCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
@@ -19,9 +20,13 @@ const postsCollection = defineCollection({
 		nextSlug: z.string().default(""),
 	}),
 });
+
+// 另一个集合示例
 const specCollection = defineCollection({
 	schema: z.object({}),
 });
+
+// 导出集合
 export const collections = {
 	posts: postsCollection,
 	spec: specCollection,

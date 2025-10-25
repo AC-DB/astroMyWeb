@@ -6,8 +6,10 @@ import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 import { siteConfig } from "@/config";
 
+// 初始化 Markdown 解析器
 const parser = new MarkdownIt();
 
+// 删除无效的 XML 字符
 function stripInvalidXmlChars(str: string): string {
 	return str.replace(
 		// biome-ignore lint/suspicious/noControlCharactersInRegex: https://www.w3.org/TR/xml/#charsets
@@ -16,6 +18,7 @@ function stripInvalidXmlChars(str: string): string {
 	);
 }
 
+// 生成 RSS Feed
 export async function GET(context: APIContext) {
 	const blog = await getSortedPosts();
 
