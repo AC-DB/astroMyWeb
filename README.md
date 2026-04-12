@@ -1,8 +1,8 @@
 # astroMyWeb
 
-![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen)
-![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-saicaca)](https://deepwiki.com/saicaca/fuwari)
+![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)
+![pnpm >= 10](https://img.shields.io/badge/pnpm-%3E%3D10-blue)
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-saicaca)](https://deepwiki.com/ac-db/astroMyWeb)
 
 本项目基于 [Astro](https://astro.build) 框架与 [Fuwari](https://github.com/saicaca/fuwari) 静态博客模板开发。
 
