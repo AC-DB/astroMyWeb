@@ -1,7 +1,11 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 // 定义内容集合及其模式
 const postsCollection = defineCollection({
+	// 为集合引入 glob loader
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/posts" }),
 	schema: z.object({
 		title: z.string(),
 		published: z.date(),
@@ -23,6 +27,7 @@ const postsCollection = defineCollection({
 
 // 另一个集合示例
 const specCollection = defineCollection({
+	loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/spec" }),
 	schema: z.object({}),
 });
 
