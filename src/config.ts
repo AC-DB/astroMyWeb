@@ -8,8 +8,8 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "次元裂隙",
-	subtitle: "觉醒吧! 黑暗之魂",
+	title: "AC_DB",
+	subtitle: "摆烂ing~",
 	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 250, // 主题颜色的默认色调，从 0 到 360。例如红色：0，青色：200，青色：250，粉色：345
@@ -31,11 +31,11 @@ export const siteConfig: SiteConfig = {
 	},
 	favicon: [
 		// 将此数组留空即可使用默认的图标
-		{
-			src: "/favicon/MaterialSymbolsCakeOutline.png", // 图标路径，相对于 /public 目录
-			// theme: "dark", // （可选）'light' 或 'dark'，仅当您在亮色和暗色模式下使用不同的图标时才设置
-			// sizes: "32x32", // （可选）图标大小，仅当您使用不同大小的图标时才设置
-		},
+		// {
+		// 	src: "/favicon/XXX", // 图标路径，相对于 /public 目录
+		// 	theme: "light", // （可选）'light' 或 'dark'，仅当您在亮色和暗色模式下使用不同的图标时才设置
+		// 	sizes: "32x32", // （可选）图标大小，仅当您使用不同大小的图标时才设置
+		// },
 	],
 };
 
@@ -55,7 +55,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.jpg", // 相对于 /src 目录。如果 /public 目录以 '/' 开头，则相对于 /public 目录。
 	name: "AC_DB",
-	bio: "写代码、看番剧、研究BUG和人生意义--梦想成为移动开发大佬QWQ喵~",
+	bio: "写代码、看番、思考人生意义--梦想成为大佬QWQ喵~",
 	links: [
 		{
 			name: "BiliBili",
