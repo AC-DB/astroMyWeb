@@ -23,6 +23,7 @@
 | `pnpm format`                     | 格式化代码                             |
 | `pnpm preview`                    | 本地预览已构建的网站                    |
 | `pnpm new-post <filename>`        | 创建新文章至 `src/content/posts/`      |
+| `pnpm new-ls <filepath>`          | 创建新文章目录至 `src/content/posts/`      |
 | `pnpm astro ...`                  | 执行 `astro add`, `astro check` 等指令 |
 | `pnpm astro --help`               | 显示 Astro CLI 帮助                    |
 

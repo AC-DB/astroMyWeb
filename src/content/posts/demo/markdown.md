@@ -2,10 +2,7 @@
 title: Markdown示例
 published: 2023-10-01
 description: Markdown 博客文章的一个简单示例。
-tags:
-  - Markdown
-  - 写博客
-  - 演示
+tags: [demo]
 category: 示例
 draft: false
 ---
