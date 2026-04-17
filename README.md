@@ -2,7 +2,7 @@
 
 ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)
 ![pnpm >= 10](https://img.shields.io/badge/pnpm-%3E%3D10-blue)
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-saicaca)](https://deepwiki.com/ac-db/astroMyWeb)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/AC-DB/astroMyWeb)
 
 本项目基于 [Astro](https://astro.build) 框架与 [Fuwari](https://github.com/saicaca/fuwari) 静态博客模板开发。
 
