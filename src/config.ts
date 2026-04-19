@@ -55,7 +55,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.jpg", // 相对于 /src 目录。如果 /public 目录以 '/' 开头，则相对于 /public 目录。
 	name: "AC_DB",
-	bio: "写代码、看番、思考人生意义--梦想成为大佬QWQ喵~",
+	bio: "与你的日常，便是奇迹",
 	links: [
 		{
 			name: "BiliBili",
