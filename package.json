@@ -37,6 +37,7 @@
 		"astro": "6.1.7",
 		"astro-expressive-code": "^0.41.7",
 		"astro-icon": "^1.1.5",
+		"function-plot": "^1.25.3",
 		"hastscript": "^9.0.1",
 		"katex": "^0.16.45",
 		"markdown-it": "^14.1.1",

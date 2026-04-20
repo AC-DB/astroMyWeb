@@ -63,6 +63,20 @@ export default defineConfig({
 				pluginLanguageBadge(),
 				pluginCustomCopyButton(),
 			],
+			shiki: {
+				langs: [
+					{
+						name: "math-plot",
+						scopeName: "source.math-plot",
+						patterns: [],
+					},
+					{
+						name: "mermaid",
+						scopeName: "source.mermaid",
+						patterns: [],
+					},
+				],
+			},
 			defaultProps: {
 				wrap: true,
 				overridesByLang: {

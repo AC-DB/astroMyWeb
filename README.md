@@ -116,7 +116,7 @@ lang: jp      # 仅当帖子的语言与“config.ts”中的网站语言不同�
 | 代码展示     | Expressive Code                 |
 | 搜索         | Pagefind                        |
 | 图标         | Iconify + Font Awesome          |
-| 数学公式     | KaTeX                           |
+| 数学与制图   | KaTeX + function-plot + Mermaid |
 | 页面转换     | Swup.js                         |
 | 图片处理     | Sharp                           |
 | 代码质量     | Biome + TypeScript              |
@@ -125,6 +125,7 @@ lang: jp      # 仅当帖子的语言与“config.ts”中的网站语言不同�
 
 Astro 除了默认支持 [GitHub Flavored Markdown](https://github.github.com/gfm/) 之外，还新增了以下几项 Markdown 功能：
 
+- 自定义 Markdown 绘图渲染：支持书写 `mermaid` 和 `math-plot` (Function-Plot) 原生代码块实时渲染数学图像。
 - 警告([预览和使用](https://fuwari.vercel.app/posts/markdown-extended/#admonitions))
 - GitHub 代码库卡片([预览和使用](https://fuwari.vercel.app/posts/markdown-extended/#github-repository-cards))
 - 使用 Expressive Code 增强代码块([预览](https://fuwari.vercel.app/posts/expressive-code/) / [文档](https://expressive-code.com/))

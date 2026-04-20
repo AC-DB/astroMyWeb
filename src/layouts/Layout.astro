@@ -158,6 +158,7 @@ const bannerOffset =
 		<div id="page-height-extend" class="hidden h-[300vh]"></div>
 		<script>
 			import mermaid from "mermaid";
+			import functionPlot from "function-plot";
 			
 			async function renderMermaid() {
 				const codeBlocks = document.querySelectorAll(
@@ -196,6 +197,7 @@ const bannerOffset =
 
 			const setupMermaid = () => {
 				window.swup.hooks.on("page:view", renderMermaid);
+				window.swup.hooks.on("page:view", renderMathPlot);
 			};
 
 			if (window?.swup?.hooks) {
@@ -205,6 +207,44 @@ const bannerOffset =
 			}
 
 			document.addEventListener("DOMContentLoaded", renderMermaid);
+			document.addEventListener("DOMContentLoaded", renderMathPlot);
+
+			async function renderMathPlot() {
+				const codeBlocks = document.querySelectorAll("[data-language='math-plot']");
+				for (const block of codeBlocks) {
+					let codeText = "";
+					const lines = block.querySelectorAll(".ec-line .code");
+					if (lines.length > 0) {
+						codeText = Array.from(lines).map(l => l.textContent).join("\n");
+					} else {
+						codeText = block.textContent || "";
+					}
+
+					const wrapper = block.closest(".expressive-code") || block;
+					const htmlWrapper = wrapper as HTMLElement;
+					if (htmlWrapper.parentNode) {
+						const div = document.createElement("div");
+						div.className = "math-plot-container flex justify-center my-4 p-4 rounded-lg bg-[var(--card-bg)]";
+						
+						if (htmlWrapper.classList.contains("expressive-code")) {
+							htmlWrapper.style.display = "none";
+						}
+						htmlWrapper.parentNode.insertBefore(div, htmlWrapper.nextSibling);
+
+						try {
+							const options = JSON.parse(codeText);
+							options.target = div;
+							if (!options.width) options.width = Math.min(600, window.innerWidth - 60);
+							if (!options.height) options.height = 400;
+							functionPlot(options);
+						} catch (err) {
+							console.error("Math plot parse error:", err);
+							const errorMessage = err instanceof Error ? err.message : String(err);
+							div.textContent = "图片解析错误: 代码块内的参数必须是合法的 JSON 格式。(" + errorMessage + ")";
+						}
+					}
+				}
+			}
 		</script>
 	</body>
 </html>
