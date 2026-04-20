@@ -4,7 +4,7 @@ published: 2024-04-01
 description: "如何使用此博客模板。"
 image: "./cover.jpeg"
 tags: [demo]
-category: 指南
+category: 示例
 draft: false
 ---
 
