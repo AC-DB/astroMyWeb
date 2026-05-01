@@ -34,7 +34,7 @@
 		"@iconify/svelte": "^4.2.0",
 		"@swup/astro": "^1.8.0",
 		"@tailwindcss/typography": "^0.5.19",
-		"astro": "6.1.7",
+		"astro": "6.2.1",
 		"astro-expressive-code": "^0.41.7",
 		"astro-icon": "^1.1.5",
 		"function-plot": "^1.25.3",
