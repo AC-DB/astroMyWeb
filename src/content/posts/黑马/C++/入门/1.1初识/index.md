@@ -41,13 +41,10 @@ lang: ''
 
 ```c++
 #include<iostream>
-using namespace std;
 
 int main() {
 
-	cout << "Hello world" << endl;
-
-	system("pause");
+	std::cout << "Hello World" << std::endl;
 
 	return 0;
 }
@@ -82,18 +79,20 @@ int main() {
 
 ```cpp
 #include<iostream>
-using namespace std;
 
 int main() {
+
+	//单行注释
+	/*
+		多行注释
+	*/
 
 	//变量的定义
 	//语法：数据类型  变量名 = 初始值
 
 	int a = 10;
 
-	cout << "a = " << a << endl;
-	
-	system("pause");
+	std::cout << "a = " << a << std::endl;
 
 	return 0;
 }
@@ -118,21 +117,21 @@ C++定义常量两种方式
 **示例：**
 
 ```cpp
+#include<iostream>
+
 //1、宏常量
 #define day 7
 
 int main() {
 
-	cout << "一周里总共有 " << day << " 天" << endl;
+	std::cout << "一周里总共有 " << day << " 天" << std::endl;
 	//day = 8;  //报错，宏常量不可以修改
 
 	//2、const修饰变量
 	const int month = 12;
-	cout << "一年里总共有 " << month << " 个月份" << endl;
+
+	std::cout << "一年里总共有 " << month << " 个月份" << std::endl;
 	//month = 24; //报错，常量是不可以修改的
-	
-	
-	system("pause");
 
 	return 0;
 }
