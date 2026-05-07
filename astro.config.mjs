@@ -128,7 +128,14 @@ export default defineConfig({
 			parseDirectiveNode,
 		],
 		rehypePlugins: [
-			rehypeKatex,
+			[
+				rehypeKatex,
+				{
+					macros: {
+						"\\iddots": "\\mathinner{\\cdot^{\\cdot^{\\cdot}}}",
+					},
+				},
+			],
 			rehypeSlug,
 			[
 				rehypeComponents,
