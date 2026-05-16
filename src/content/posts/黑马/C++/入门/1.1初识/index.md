@@ -1,6 +1,6 @@
 ---
 title: 1.1初识
-slug: dark-horse/c/introduction/11-first-encounter
+slug: dark-horse/c++/introduction/11-first-encounter
 published: 2026-04-26
 description: ''
 image: ''

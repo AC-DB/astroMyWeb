@@ -1,6 +1,6 @@
 ---
 title: 1.4程序流程结构
-slug: dark-horse/c/introduction/14-program-flow-structure
+slug: dark-horse/c++/introduction/14-program-flow-structure
 published: 2026-04-28
 description: ''
 image: ''

@@ -1,6 +1,6 @@
 ---
 title: 1.5数组
-slug: dark-horse/c/introduction/15-array
+slug: dark-horse/c++/introduction/15-array
 published: 2026-04-28
 description: ''
 image: ''
