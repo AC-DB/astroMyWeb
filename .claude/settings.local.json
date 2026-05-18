@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm --version)",
+      "Bash(pnpm outdated *)",
+      "Bash(pnpm info *)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm check *)",
+      "Bash(pnpm peers *)",
+      "Bash(pnpm build *)"
+    ]
+  }
+}
