@@ -1,6 +1,6 @@
 ---
-title: 2.1内存分区模型
-slug: dark-horse/c++/core/21-memory-partition-model
+title: 3.1内存分区模型
+slug: dark-horse/c++/core/31-memory-partition-model
 published: 2026-05-18
 description: ''
 image: ''
