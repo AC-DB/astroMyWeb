@@ -4,6 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
+import { unified } from "@astrojs/markdown-remark";
 import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
@@ -118,7 +119,8 @@ export default defineConfig({
 		sitemap(),
 	],
 	markdown: {
-		remarkPlugins: [
+		processor: unified({
+			remarkPlugins: [
 			remarkMath,
 			remarkReadingTime,
 			remarkExcerpt,
@@ -174,6 +176,7 @@ export default defineConfig({
 				},
 			],
 		],
+		}),
 	},
 	vite: {
 		build: {
