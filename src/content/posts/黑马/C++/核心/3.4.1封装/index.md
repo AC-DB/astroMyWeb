@@ -1,5 +1,5 @@
 ---
-title: 封装
+title: 3.4.1封装
 slug: dark-horse/c++/core/341-packaging
 published: 2026-05-26
 description: ''
