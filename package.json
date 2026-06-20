@@ -28,6 +28,7 @@
 		"@expressive-code/plugin-line-numbers": "^0.42.0",
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
 		"@fontsource/roboto": "^5.2.10",
+		"@giscus/svelte": "^3.1.0",
 		"@iconify-json/fa6-brands": "^1.2.6",
 		"@iconify-json/fa6-regular": "^1.2.4",
 		"@iconify-json/fa6-solid": "^1.2.4",
@@ -75,5 +76,5 @@
 		"postcss-import": "^16.1.1",
 		"postcss-nesting": "^13.0.2"
 	},
-	"packageManager": "pnpm@11.5.1"
+	"packageManager": "pnpm@11.8.0"
 }

@@ -3,6 +3,7 @@ import { type CollectionEntry, render } from "astro:content";
 import path from "node:path";
 import License from "@components/misc/License.astro";
 import Markdown from "@components/misc/Markdown.astro";
+import Comment from "@components/widget/Comment.svelte";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
@@ -135,5 +136,8 @@ const jsonLd = {
             </div>}
         </a>
     </div>
+
+    <!-- giscus 评论区 -->
+    <Comment client:load />
 
 </MainGridLayout>
